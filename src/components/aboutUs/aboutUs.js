@@ -5,7 +5,7 @@ import Banner from '../banner/banner';
 import Footer from '../footer/footer'; 
 import aboutUsBg from '../../assets/images/aboutUsBg.jpg';
 import ceoSignature from '../../assets/images/ceoSignature.webp';
-import Tab from 'react-bootstrap/Tab';
+import Tab from 'react-bootstrap/Tab';  
 import Tabs from 'react-bootstrap/Tabs';
 
 class AboutUs extends React.Component {
