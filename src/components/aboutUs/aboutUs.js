@@ -2,7 +2,7 @@ import React from 'react';
 import './aboutUs.css';
 import Header from '../navbar/navbar';
 import Banner from '../banner/banner';
-import Footer from '../footer/footer';
+import Footer from '../footer/footer'; 
 import aboutUsBg from '../../assets/images/aboutUsBg.jpg';
 import ceoSignature from '../../assets/images/ceoSignature.webp';
 import Tab from 'react-bootstrap/Tab';
