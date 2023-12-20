@@ -1,0 +1,23 @@
+.sampleSketches {
+  padding: 60px 0;
+}
+.sampleSketches .accordion-button:focus {
+  box-shadow: none;
+}
+.sampleSketches .accordion-button:not(.collapsed) {
+  color: #f00100;
+  background-color: transparent;
+  box-shadow: none;
+  padding-bottom: 0px;
+}
+.sampleSketches h2 {
+  display: block;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+.sampleSketches h2::after {
+  content: none;
+}
+.sampleSketches .accordion-button {
+  font-size: 18px;
+}

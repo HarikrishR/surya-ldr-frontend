@@ -1,0 +1,10 @@
+.dashBoard {
+    padding: 40px 0;
+}
+.dashBoard .nav-item {
+    font-family: 'dm-sans-extra-bold';
+}
+.dashBoard .nav-pills .nav-link.active {
+    background-color: #000;
+    border-radius: 0;
+}

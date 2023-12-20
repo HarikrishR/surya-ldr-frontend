@@ -1,0 +1,29 @@
+.signIn {
+    padding: 60px 0;
+}
+.signIn p,
+.signIn form,
+.modal-body p {
+    font-family: 'jost-regular';
+}
+.signIn h3,
+.modal-body h4 {
+    font-family: 'dm-sans-extra-bold';
+}
+.signIn .showHide {
+    right: 10px;
+    top: 6px;
+}
+.signIn .showHide img{
+    width: 20px;
+    cursor: pointer;
+}
+.signIn .formError {
+    position: absolute;
+    bottom: -22px;
+    font-size: 14px;
+}
+.signIn .formError,
+.signIn .signUpErr {
+    color: #f00100;
+}

@@ -1,0 +1,27 @@
+.signUp {
+    padding: 60px 0;
+}
+.signUp p,
+.signUp form{
+    font-family: 'jost-regular';
+}
+.signUp h3 {
+    font-family: 'dm-sans-extra-bold';
+}
+.signUp .showHide {
+    right: 10px;
+    top: 6px;
+}
+.signUp .showHide img{
+    width: 20px;
+    cursor: pointer;
+}
+.signUp .formError {
+    position: absolute;
+    bottom: -22px;
+    font-size: 14px;
+}
+.signUp .formError,
+.signUp .signUpErr {
+    color: #f00100;
+}

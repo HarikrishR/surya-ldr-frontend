@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'jost-thin';
+  src: url('./assets/fonts/Jost/static/Jost-Thin.ttf');
+}
+@font-face {
+  font-family: 'jost-light';
+  src: url('./assets/fonts/Jost/static/Jost-Light.ttf');
+}
+@font-face {
+  font-family: 'jost-medium';
+  src: url('./assets/fonts/Jost/static/Jost-Medium.ttf');
+}
+@font-face {
+  font-family: 'jost-regular';
+  src: url('./assets/fonts/Jost/static/Jost-Regular.ttf');
+}
+@font-face {
+  font-family: 'jost-semi-bold';
+  src: url('./assets/fonts/Jost/static/Jost-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'jost-black';
+  src: url('./assets/fonts/Jost/static/Jost-Black.ttf');
+}
+@font-face {
+  font-family: 'jost-bold';
+  src: url('./assets/fonts/Jost/static/Jost-Bold.ttf');
+}
+@font-face {
+  font-family: 'jost-extra-bold';
+  src: url('./assets/fonts/Jost/static/Jost-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-thin';
+  src: url('./assets/fonts/DM_Sans/static/DMSans-Thin.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-light';
+  src: url('./assets/fonts/DM_Sans/static/DMSans-Light.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-medium';
+  src: url('./assets/fonts/DM_Sans/static/DMSans-Medium.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-regular';
+  src: url('./assets/fonts/DM_Sans/static/DMSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-black';
+  src: url('./assets/fonts/DM_Sans/static/DMSans-Black.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-semi-bold';
+  src: url('./assets/fonts/DM_Sans/static/DMSans-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-bold';
+  src: url('./assets/fonts/DM_Sans/static/DMSans-Bold.ttf');
+}
+@font-face {
+  font-family: 'dm-sans-extra-bold';
+  src: url('./assets/fonts/DM_Sans/static/DMSans-ExtraBold.ttf');
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #423639;
+}
+a{
+  color: #423639;
+  text-decoration: none;
+}
+
+h2 {
+  font-family: 'dm-sans-extra-bold';
+  font-size: 38px;
+  position: relative;
+  display: inline-block;
+  padding: 0 0 16px 0;
+  margin-bottom: 1.5rem;
+}
+h2::after {
+  position: absolute;
+  width: 75px;
+  height: 5px;
+  background: #f00100;
+  content: '';
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+.btn {
+  background: #f00100;
+  padding: 8px 20px;
+  color: #fff;
+  border-radius: 0px;
+  border: 0px;
+  font-family: 'jost-medium';
+}
+.form-control {
+  border-radius: 0px;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #f00100;
+  border: 0px;
+}

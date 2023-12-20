@@ -1,0 +1,14 @@
+.pageNotFound {
+    padding: 200px 0;
+    background: url('../../assets/images/pageNotFoundBg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.pageNotFound h3 {
+    font-family: 'dm-sans-extra-bold';
+    font-size: 100px;
+}
+.pageNotFound p{
+    font-family: 'jost-medium';
+    font-size: 24px;
+}

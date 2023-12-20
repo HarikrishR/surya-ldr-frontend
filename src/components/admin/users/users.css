@@ -1,0 +1,15 @@
+.users .btn-refresh {
+    font-family: 'jost-regular';
+    border-radius: 5px;
+    border: 1px solid #e4e4e4;
+    background: #fff;
+    font-size: 12px;
+    padding: 4px 14px;
+    line-height: normal;
+}
+.users table thead {
+    font-family: 'dm-sans-extra-bold';
+}
+.users table tbody {
+    font-family: 'jost-regular';
+}

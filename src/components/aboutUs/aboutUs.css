@@ -1,0 +1,62 @@
+.aboutCEO {
+    padding: 60px 0;
+}
+.aboutCEO p{
+    font-family: 'jost-regular';
+}
+.aboutCEO h6 {
+    font-family: 'dm-sans-extra-bold';
+}
+.aboutCEO img {
+    width: 125px;
+}
+.abtAccordion {
+    padding: 60px 0;
+    background: url('../../assets/images/wavyBG.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.abtAccordionOverlay {
+    background: #f8f8f8;
+    opacity: .85;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.abtAccordion .container {
+    z-index: 1;
+}
+.abtAccordion p{
+    font-family: 'jost-regular';
+}
+.abtAccordion .nav-tabs .nav-link {
+    font-family: 'dm-sans-extra-bold';
+    color: #423639;
+    padding: 0px 20px 15px 0;
+    font-size: 18px;
+}
+.abtAccordion .nav-tabs .nav-link.active {
+    color: #f00100;
+}
+.abtAccordion .nav-tabs .nav-link,
+.abtAccordion .nav-tabs .nav-link.active,
+.abtAccordion .nav-tabs .nav-link:focus {
+    border: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid #dee2e6;
+}
+.abtAccordion .ul .li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 20px;
+}
+.abtAccordion .ul .li::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 1.75px;
+    left: 0px;
+    top: 12px;
+    background: #f00100;
+}

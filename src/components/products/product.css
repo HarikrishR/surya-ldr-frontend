@@ -1,0 +1,12 @@
+.products {
+    padding: 60px 0;
+}
+.products p{
+    font-family: 'jost-regular';
+}
+.products h6 {
+    font-family: 'dm-sans-extra-bold';
+}
+.products img {
+    width: 125px;
+}

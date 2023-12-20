@@ -1,0 +1,117 @@
+.banner {
+    background-image: url('../../assets/images/index-banner.jpg');
+    background-size: cover;
+    color: #fff;
+    padding: 180px 40px;
+    background-attachment: fixed;
+}
+.bannerOverlay {
+    background-image: linear-gradient(90deg,#2b1320 10%,#980F5A05 200%);
+    opacity: .75;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.bannerDes {
+    z-index: 1;
+    position: relative;
+}
+.bannerDes h1 {
+    font-family: 'dm-sans-bold';
+    font-size: 65px;
+}
+.bannerDes p {
+    font-family: 'jost-medium';
+    font-size: 20px;
+    width: 70%;
+}
+.indexAbt {
+    padding: 60px 0;
+}
+.indexAbt p{
+    font-family: 'jost-regular';
+}
+.whyChoose {
+    padding: 60px 0;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    background: url('../../assets/images/wavyBG.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.whyChooseOverlay {
+    background: #f8f8f8;
+    opacity: .85;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.whyChoose .container {
+    z-index: 1;
+}
+.whyChoose p{
+    font-family: 'jost-regular';
+}
+.whyChoose ul {
+    list-style-type: none;
+}
+.whyChoose ul li{
+    font-family: 'jost-semi-bold';
+}
+.needs {
+    padding: 60px 0;
+    background: url('../../assets/images/wavyBG.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.needsOverlay {
+    background: #f8f8f8;
+    opacity: .85;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.needs .container {
+    z-index: 1;
+}
+.needs p{
+    font-family: 'jost-regular';
+}
+.needs .needsTop p{
+    width: 75%;
+}
+.needs h3{
+    font-family: 'dm-sans-extra-bold';
+    font-size: 16px;
+}
+.needs img{
+    width: 55px;
+}
+.needs .needsBox {
+    background: #fff;
+    padding: 20px 15px;
+}
+@media screen and (max-width: 425px) {
+    .banner {
+        padding: 90px 20px;
+    }
+}
+/* @media screen and (max-width: 768px) {
+    .needs .needsTop p{
+        width: auto;
+    }
+} */
+@media screen and (max-width: 768px) {
+    .bannerDes h1 {
+        font-size: 40px;
+    }
+    .bannerDes p {
+        width: auto;
+    }
+    .needs .needsTop p{
+        width: auto;
+    }
+}

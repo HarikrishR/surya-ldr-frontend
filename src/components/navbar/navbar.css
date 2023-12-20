@@ -1,0 +1,21 @@
+.header {
+    font-family: 'jost-medium';
+}
+.navTop p {
+    color: #5e5058;
+    font-size: 14px;
+}
+.logo {
+    width: 180px;
+}
+.scrollToTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #f00100;
+    padding: 10px 8px;
+    z-index: 10;
+}
+.scrollToTop img {
+    width: 24px;
+}

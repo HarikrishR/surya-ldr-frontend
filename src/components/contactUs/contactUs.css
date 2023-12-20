@@ -1,0 +1,27 @@
+.contactUs {
+    padding: 60px 0 0;
+}
+.contactUs h2::after{
+    right: auto;
+}
+.contactUs p,
+.contactUs label,
+.contactUs input {
+    font-family: 'jost-regular';
+}
+.contactUs .submitNow {
+    background: #f00100;
+    padding: 10px 20px;
+    color: #fff;
+    border: 0px;
+    font-family: 'jost-medium';
+}
+.contactUs .formError {
+    position: absolute;
+    bottom: -20px;
+    font-size: 12.5px;
+}
+.contactUs .formError,
+.contactUs .contactUsErr {
+    color: #f00100;
+}
