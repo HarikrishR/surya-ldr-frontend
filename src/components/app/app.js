@@ -23,6 +23,7 @@ import InteriorSurvey from '../services/interiorDesign';
 import RealEstateSurvey from '../services/realEstateSurvey';
 import DigitalSurvey from '../services/digitalSurvey';
 import FMBSketches from '../services/fmbSketches';
+import Career from '../career/career';
 import PageNotFound from '../pageNotFound/pageNotFound';
 import { connect } from "react-redux";
 import { userDataRes, isAuthenticatedRes } from '../../redux/actions/actions';
@@ -69,6 +70,7 @@ class Application extends React.Component {
                     <Route path="/real-estate" element={<RealEstateSurvey />} />
                     <Route path="/digital-survey" element={<DigitalSurvey />} />
                     <Route path="/fmb-sketches" element={<FMBSketches />} />
+                    <Route path="/career" element={<Career />} />
                     {/* <Route path="/dashboard" element={<DashBoard />} /> */}
                     {/* <Route path="/products" element={<Products />} /> */}
                     {/* <Route path="/sign-in" element={<SignIn />} /> */}

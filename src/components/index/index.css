@@ -2,7 +2,7 @@
     background-image: url('../../assets/images/index-banner.jpg');
     background-size: cover;
     color: #fff;
-    padding: 180px 40px;
+    padding: 180px 40px 180px 80px;
     background-attachment: fixed;
 }
 .bannerOverlay {

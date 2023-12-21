@@ -64,16 +64,18 @@ class SignUp extends React.Component {
         if(!this.state.user.password) this.setState({passwordErr: "Please Enter Password"});
         else this.setState({passwordErr: null});
 
-        var data = this.state.user;
-        if(data.userName && data.phoneNumber && data.emailAddress && data.password
-            && this.state.emailAddressErr === null){
-            this.props.fetchSignUp(data);
-            this.setState(iniState);
-        }
+        setTimeout(() => {
+            var data = this.state.user;
+            if(data.userName && data.phoneNumber && data.emailAddress && data.password
+                && this.state.emailAddressErr === null){
+                this.props.fetchSignUp(data);
+            }
+        }, 500);
     }
 
     componentDidUpdate(){
         if(this.props.signUpRes){
+            this.setState(iniState);
             if(this.props.signUpRes.status === 400)
                 this.setState({signUpSubmit: this.props.signUpRes.message})
             else {

@@ -58,11 +58,15 @@ class Header extends React.Component {
                         <Link title='Services' to="/services" className='nav-link'>Services</Link>
                         <Link title='Products' to="/products" className='nav-link'>Products</Link>
                         <Link title='Sample Sketches' to="/sample-sketches" className='nav-link'>Sample Sketches</Link>
+                        
                         {
                         this.props.isAuthenticated && this.props.userData.role === "admin" ? 
                         <Link title='Contact Us' to="/dashboard" className='nav-link'>Dashboard</Link>
                         :
-                        <Link title='Contact Us' to="/contact-us" className='nav-link'>Contact Us</Link>
+                        <>
+                            <Link title='Career' to="/career" className='nav-link'>Career</Link>
+                            <Link title='Contact Us' to="/contact-us" className='nav-link'>Contact Us</Link>
+                        </>
                         }
                     </Nav>
                     {
@@ -73,9 +77,9 @@ class Header extends React.Component {
                     }
                     {
                         this.props.isAuthenticated ? 
-                        <Link title='Logout' to="" onClick={()=>this.logout()} className='ms-3 btn'>Logout</Link>
+                        <Link title='Logout' to="" onClick={()=>this.logout()} className='ms-lg-3 mt-2 mt-lg-0 btn'>Logout</Link>
                         :
-                        <Link title='Sign In' to="/sign-in" className='ms-3 btn'>Sign In</Link>
+                        <Link title='Sign In' to="/sign-in" className='ms-lg-3 btn'>Sign In</Link>
                     }
                     </Navbar.Collapse>
                 </Navbar>

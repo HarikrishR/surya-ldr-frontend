@@ -4,6 +4,16 @@
 .contactUs h2::after{
     right: auto;
 }
+.contactUs .phone {
+    width: 22px;
+}
+.contactUs .mail {
+    width: 24px;
+}
+.contactUs h4{
+    font-family: 'dm-sans-extra-bold';
+    font-size: 18px;
+}
 .contactUs p,
 .contactUs label,
 .contactUs input {

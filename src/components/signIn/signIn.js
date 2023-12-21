@@ -49,15 +49,19 @@ class SignIn extends React.Component {
         if(!this.state.user.password) this.setState({passwordErr: "Please Enter Password"});
         else this.setState({passwordErr: null});
 
-        var data = this.state.user;
-        if(data.userName && data.password){
-            this.props.fetchSignIn(data.user);
-            this.setState(iniState);
-        }
+        setTimeout(() => {
+            var data = this.state.user;
+            if(data.userName && data.password){
+                this.props.fetchSignIn(data);
+            }
+        }, 500);
+
+        
     }
 
     componentDidUpdate(){
         if(this.props.signInRes){
+            this.setState(iniState);
             if(this.props.signInRes.status === 400)
                 this.setState({signInSubmit: this.props.signInRes.message})
             else {

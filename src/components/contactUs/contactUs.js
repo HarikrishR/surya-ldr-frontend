@@ -6,6 +6,9 @@ import Footer from '../footer/footer';
 import contactBg from '../../assets/images/contactUsBg.jpg'
 import { connect } from "react-redux";
 import { contactUs } from '../../redux/actions/actions';
+import location from '../../assets/images/location.svg';
+import phone from '../../assets/images/phone.svg';
+import mail from '../../assets/images/mail.svg';
 
 const iniState = {
     user:{
@@ -60,13 +63,16 @@ class ContactUs extends React.Component {
         if(!this.state.user.message) this.setState({messageErr: "Please Enter Message"});
         else this.setState({messageErr: null});
 
-        var data = this.state.user;
-        if(data.name && data.emailAddress && data.phoneNumber && data.location && data.message
-            && this.state.emailAddressErr === null
-        ){
-            console.log(this.state.user);
-            this.setState(iniState);
-        }
+        setTimeout(() => {
+            var data = this.state.user;
+            if(data.name && data.emailAddress && data.phoneNumber && data.location && data.message
+                && this.state.emailAddressErr === null
+            ){
+                console.log(data);
+                this.setState(iniState);
+            }
+        }, 500);
+        
     }
 
     render(){
@@ -77,11 +83,37 @@ class ContactUs extends React.Component {
                 <div className='contactUs'>
                     <div className='container'>
                         <div className='row'>
-                            <div className='col-md-5'>
+                            <div className='col-lg-6'>
                                 <h2>We'd love to hear from you.</h2>
                                 <p>We are the best Land surveyors near you, we offer services like Topographical surveys, Layout surveys and Boundary surveys and more. In recent years, we had been benefiting landlords in settlements and we manage land surveyors in Chennai.</p>
+                                <div className='row'>
+                                    <div className='col-sm-6'>
+                                        <div className='d-flex align-top mb-3'>
+                                            <div>
+                                                <img src={phone} alt='location' className='me-3 phone'/>
+                                            </div>
+                                            <div>
+                                                {/* <h4>Phone</h4> */}
+                                                <p className='mb-2'>+91 9940143131</p>
+                                                <p className='mb-2'>+91 9840281288</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='col-sm-6'>
+                                        <div className='d-flex align-top mb-3'>
+                                        <div>
+                                            <img src={mail} alt='location' className='me-3 mail'/>
+                                        </div>
+                                        <div>
+                                            {/* <h4>Mail</h4> */}
+                                            <p className='mb-2'>lands@landsurveys.in</p>
+                                            <p className='mb-0'>lsit.rgn@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className='col-md-7'>
+                            <div className='col-lg-6'>
                                 <form>
                                     <div className='row'>
                                         <div className='col-md-6'>

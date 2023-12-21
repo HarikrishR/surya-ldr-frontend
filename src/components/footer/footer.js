@@ -20,11 +20,11 @@ class Footer extends React.Component {
                         <div className='col-sm-6 col-md-3 mb-4 mb-sm-0'>
                             <h5 className='mb-4'>QUICK LINKS</h5>
                             <ul className='ps-0 mb-0'>
-                                <li className='mb-1'><Link title='Survey' to="/">Home</Link></li>
-                                <li className='mb-1'><Link title='Survey' to="/about-us">About Us</Link></li>
-                                <li className='mb-1'><Link title='Survey' to="/services">Services</Link></li>
-                                <li className='mb-1'><Link title='Survey' to="/sample-sketches">Sample Sketches</Link></li>
-                                <li className='mb-1'><Link title='Survey' to="/contact-us">Contact Us</Link></li>
+                                <li className='mb-1'><Link title='LDR Survey' to="/">Home</Link></li>
+                                <li className='mb-1'><Link title='About Us' to="/about-us">About Us</Link></li>
+                                <li className='mb-1'><Link title='Services' to="/services">Services</Link></li>
+                                <li className='mb-1'><Link title='Sample Sketches' to="/sample-sketches">Sample Sketches</Link></li>
+                                <li className='mb-1'><Link title='Contact Us' to="/contact-us">Contact Us</Link></li>
                             </ul>
                         </div>
                         <div className='col-sm-6 col-md-4'>
