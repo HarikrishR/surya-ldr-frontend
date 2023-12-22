@@ -5,10 +5,12 @@ import Banner from '../banner/banner';
 import Footer from '../footer/footer';
 import contactBg from '../../assets/images/contactUsBg.jpg'
 import { connect } from "react-redux";
-import { contactUs } from '../../redux/actions/actions';
+import { contactUs, contactUsRes } from '../../redux/actions/actions';
 import location from '../../assets/images/location.svg';
 import phone from '../../assets/images/phone.svg';
 import mail from '../../assets/images/mail.svg';
+import Modal from 'react-bootstrap/Modal';
+import { Link } from "react-router-dom";
 
 const iniState = {
     user:{
@@ -23,7 +25,8 @@ const iniState = {
     phoneNumberErr: null,
     locationErr: null,
     messageErr: null,
-    contactUsSubmit: null
+    contactUsSubmit: null,
+    showModal: false
 }
 
 class ContactUs extends React.Component {
@@ -69,10 +72,22 @@ class ContactUs extends React.Component {
                 && this.state.emailAddressErr === null
             ){
                 console.log(data);
-                this.setState(iniState);
+                this.props.fetchContactUs(data);
             }
         }, 500);
         
+    }
+
+    componentDidUpdate(){
+        if(this.props.contactUsRes){
+            this.setState(iniState);
+            if(this.props.contactUsRes.status === 400)
+                this.setState({contactUsSubmit: this.props.contactUsRes.message})
+            else {
+                this.setState({contactUsSubmit: null, showModal: true});
+            }
+            this.props.fetchContactUsRes(null);
+        }
     }
 
     render(){
@@ -154,7 +169,7 @@ class ContactUs extends React.Component {
                                         <div className='col-md-12 mt-4'>
                                             <button className='btn'  onClick={(e)=>this.contactUs(e)}>Submit Now</button>
                                         </div>
-                                        {this.state.signInSubmit ? <p className='mb-0 mt-2 text-center contactUsErr'>{this.state.signInSubmit}</p> : ""}
+                                        {this.state.contactUsSubmit ? <p className='mb-0 mt-2 text-center contactUsErr'>{this.state.contactUsSubmit}</p> : ""}
                                     </div>
                                 </form>
                             </div>
@@ -166,6 +181,13 @@ class ContactUs extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Modal show={this.state.showModal} size="md" aria-labelledby="contained-modal-title-vcenter" centered>
+                    <Modal.Body className='text-center py-4'>
+                        <h4 className='mb-3'>Contact Success!</h4>
+                        <p>Our team will reach you soon.</p>
+                        <Link title='LDR Survey' to="/" className='btn'>Home</Link>
+                    </Modal.Body>
+                </Modal>
                 <Footer />
             </>
         )
@@ -182,6 +204,9 @@ const mapDispatchToProps = dispatch => {
     const extraProps = {
         fetchContactUs: (data)=>{
             dispatch(contactUs(data))
+        },
+        fetchContactUsRes: (data)=>{
+            dispatch(contactUsRes(data))
         }
     }
     return extraProps;

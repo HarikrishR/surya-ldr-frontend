@@ -1,0 +1,50 @@
+.chatBot {
+    position: fixed;
+    bottom: 75px;
+    right: 10px;
+    z-index: 100;
+}
+.chatBotTriggerBox {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #031f4d;
+    align-items: center;
+    display: flex;
+    padding-left: 12px;
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    z-index: 100;
+}
+.chatBotTriggerBox img{
+    width: 26px;
+}
+.chatBot .react-chatbot-kit-chat-inner-container {
+    height: 440px;
+}
+.chatBot .react-chatbot-kit-chat-message-container {
+    padding: 0 16px 10px 16px;
+    overflow: auto;
+    height: 348px;
+}
+.chatBot .react-chatbot-kit-chat-input:focus-visible {
+    outline: none;
+}
+.chatBot .react-chatbot-kit-chat-bot-message,
+.chatBot .react-chatbot-kit-user-chat-message {
+    font-size: .825rem;
+}
+.chatBot .optionBtn {
+    background: transparent;
+    border: 2px solid #7c7c7c;
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 5px;
+}
+.chatBot .optionLink {
+    display: block;
+    text-decoration: underline;
+    color: #0000ff;
+    font-size: 14px;
+}

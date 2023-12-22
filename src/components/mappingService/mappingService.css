@@ -1,0 +1,22 @@
+.mappingService {
+    padding: 60px 0;
+}
+.mappingService h4 {
+    font-family: 'dm-sans-extra-bold';
+    font-size: 22px;
+}
+.mappingService p,
+.mappingService label,
+.mappingService input,
+.mappingService select {
+    font-family: 'jost-regular';
+}
+.mappingService .formError {
+    position: absolute;
+    bottom: -20px;
+    font-size: 12.5px;
+}
+.mappingService .formError,
+.mappingService .careerErr {
+    color: #f00100;
+}

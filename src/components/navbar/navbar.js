@@ -11,6 +11,7 @@ import './navbar.css';
 import Cookies from 'js-cookie';
 import { connect } from "react-redux";
 import { userDataRes, isAuthenticatedRes } from '../../redux/actions/actions';
+import AutoBot from '../autoBot/autoBot';
 
 class Header extends React.Component {
 
@@ -83,11 +84,12 @@ class Header extends React.Component {
                     }
                     </Navbar.Collapse>
                 </Navbar>
-                <a title='Scroll to top' href="#navbar">
+                {/* <a title='Scroll to top' href="#navbar">
                     <div className='scrollToTop'>
                         <img src={upArrow} alt='Move to Top' />
                     </div>
-                </a>
+                </a> */}
+                <AutoBot />
             </div>
         )
     }

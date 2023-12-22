@@ -24,6 +24,9 @@ import RealEstateSurvey from '../services/realEstateSurvey';
 import DigitalSurvey from '../services/digitalSurvey';
 import FMBSketches from '../services/fmbSketches';
 import Career from '../career/career';
+import BoundarySurvey from '../mappingService/boundarySurvey';
+import BoundaryFixingSurvey from '../mappingService/boundaryFixingSurvey';
+import FMBDrawing from '../mappingService/fmbDrawing';
 import PageNotFound from '../pageNotFound/pageNotFound';
 import { connect } from "react-redux";
 import { userDataRes, isAuthenticatedRes } from '../../redux/actions/actions';
@@ -71,6 +74,9 @@ class Application extends React.Component {
                     <Route path="/digital-survey" element={<DigitalSurvey />} />
                     <Route path="/fmb-sketches" element={<FMBSketches />} />
                     <Route path="/career" element={<Career />} />
+                    <Route path="/boundary-survey" element={<BoundarySurvey />} />
+                    <Route path="/boundary-fixing-surveying" element={<BoundaryFixingSurvey />} />
+                    <Route path="/fmb-drawing" element={<FMBDrawing />} />
                     {/* <Route path="/dashboard" element={<DashBoard />} /> */}
                     {/* <Route path="/products" element={<Products />} /> */}
                     {/* <Route path="/sign-in" element={<SignIn />} /> */}

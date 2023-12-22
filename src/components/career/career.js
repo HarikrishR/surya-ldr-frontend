@@ -86,7 +86,7 @@ class Career extends React.Component {
         else this.setState({cvErr: null});
 
         var data = this.state.user;
-        if(data.name && data.emailAddress && data.phoneNumber && data.dob && data.address && data.role && data.experience
+        if(data.name && data.emailAddress && data.phoneNumber && data.dob && data.gender && data.address && data.role && data.experience
             && data.ctc && data.cv && this.state.emailAddressErr === null
         ){
             console.log(this.state.user);
