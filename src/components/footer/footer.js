@@ -4,6 +4,10 @@ import logo from '../../assets/images/logo.webp';
 import location from '../../assets/images/location.svg';
 import phone from '../../assets/images/phone.svg';
 import mail from '../../assets/images/mail.svg';
+import facebook from '../../assets/images/facebook.png'
+import linkedIn from '../../assets/images/linkedin.png'
+import instagram from '../../assets/images/instagram.png'
+import twitter from '../../assets/images/twitter.png'
 import './footer.css';
 
 class Footer extends React.Component {
@@ -40,6 +44,20 @@ class Footer extends React.Component {
                             <div className='d-flex align-middle'>
                                 <img src={mail} alt='Mail' className='me-3 mail'/>
                                 <p className='mb-0'>info@ldrsurveys.com</p>
+                            </div>
+                            <div className='socialIcons d-flex my-3'>
+                                <Link title='Facebook' to="https://www.facebook.com/www.Landsurveys.in/?ref=pages_you_manage" target='_blank'>
+                                    <img src={facebook} alt='Facebook' className='me-2' />
+                                </Link>
+                                <Link title='Linked In' to="https://www.linkedin.com/groups/13976846/" target='_blank'>
+                                    <img src={linkedIn} alt='Linked In' className='mx-2'/>
+                                </Link>
+                                <Link title='Twitter' to="https://twitter.com/LdrLtd" target='_blank'>
+                                    <img src={twitter} alt='Twitter' className='mx-2' />
+                                </Link>
+                                <Link title='Instagram' to="https://www.instagram.com/ldr_pvt_ltd/">
+                                    <img src={instagram} alt='Instagram' className='ms-2' />
+                                </Link>
                             </div>
                         </div>
                     </div>

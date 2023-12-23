@@ -97,7 +97,7 @@ class DgpsSruvey extends React.Component {
                                                 {this.state.emailAddressErr ? <p className='mb-0 formError'>{this.state.emailAddressErr}</p> : ""}
                                             </div>
                                         </div>
-                                        <div className='col-md-6 mt-3 mt-md-0'>
+                                        <div className='col-md-6 mt-3'>
                                             <label>Number</label>
                                             <div className='position-relative'>
                                                 <input name='phoneNumber' value={this.state.user.phoneNumber} onChange={(e)=>this.changeHandler(e)}  type='tel' placeholder='Please Enter Phone Number' className='mt-2 form-control' />

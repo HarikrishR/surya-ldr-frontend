@@ -9,3 +9,12 @@
     width: 100%;
     height: 100%;
 }
+
+@media (max-width:420px) {
+    .clients {
+        padding: 60px 15px;
+    }
+    .clients img {
+        width: 75%;
+    }
+}
