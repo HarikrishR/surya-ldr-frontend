@@ -72,3 +72,17 @@ export const contactUsRes = (contactUsRes) => ({
     type: actionTypes.CONTACT_US,
     contactUsRes
 })
+
+export const career = (data) => (dispatch) => {
+    post(endPoint + "/career", data).then((result)=>{
+        store.dispatch(careerRes(result.data))
+    })
+    .catch((exception)=>{
+        store.dispatch(careerRes(exception))
+    })
+}
+
+export const careerRes = (careerRes) => ({
+    type: actionTypes.CAREER,
+    careerRes
+})

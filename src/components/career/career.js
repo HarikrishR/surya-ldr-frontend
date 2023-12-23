@@ -5,7 +5,9 @@ import Banner from '../banner/banner';
 import Footer from '../footer/footer';
 import careerBg from '../../assets/images/careerBg.jpg'
 import { connect } from "react-redux";
-import { contactUs } from '../../redux/actions/actions';
+import { career, careerRes } from '../../redux/actions/actions';
+import { Link } from "react-router-dom";
+import Modal from 'react-bootstrap/Modal';
 
 const iniState = {
     user:{
@@ -30,7 +32,8 @@ const iniState = {
     experienceErr: null,
     ctcErr: null,
     cvErr: null,
-    contactUsSubmit: null
+    contactUsSubmit: null,
+    showModal: false
 }
 
 class Career extends React.Component {
@@ -48,6 +51,8 @@ class Career extends React.Component {
               [name]: value
             },
         });
+
+        console.log(e.target.files);
     }
 
     contactUs = (e) =>{
@@ -62,6 +67,8 @@ class Career extends React.Component {
         else this.setState({emailAddressErr: null});
 
         if(!this.state.user.phoneNumber) this.setState({phoneNumberErr: "Please Enter Phone Number"});
+        else if(!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i.test(this.state.user.phoneNumber))
+            this.setState({phoneNumberErr: "Please Enter valid Phone Number"});
         else this.setState({phoneNumberErr: null});
 
         if(!this.state.user.dob) this.setState({dobErr: "Please Select Date"});
@@ -85,12 +92,27 @@ class Career extends React.Component {
         if(!this.state.user.cv) this.setState({cvErr: "Please Select CV"});
         else this.setState({cvErr: null});
 
-        var data = this.state.user;
-        if(data.name && data.emailAddress && data.phoneNumber && data.dob && data.gender && data.address && data.role && data.experience
-            && data.ctc && data.cv && this.state.emailAddressErr === null
-        ){
-            console.log(this.state.user);
+        setTimeout(() => {
+            var data = this.state.user;
+            if(data.name && data.emailAddress && data.phoneNumber && data.dob && data.gender && data.address && data.role && data.experience
+                && data.ctc && data.cv && this.state.emailAddressErr === null && this.state.phoneNumberErr === null
+            ){
+                console.log(data);
+                // this.props.fetchCareer(data);
+            }
+        }, 500);
+        
+    }
+
+    componentDidUpdate(){
+        if(this.props.careerRes){
             this.setState(iniState);
+            if(this.props.careerRes.status === 400)
+                this.setState({careerSubmit: this.props.signUpRes.message})
+            else {
+                this.setState({careerSubmit: null, showModal:true});
+            }
+            this.props.fetchCareerRes(null);
         }
     }
 
@@ -179,7 +201,7 @@ class Career extends React.Component {
                                             </div>
                                         </div>
                                         <div className='col-md-6 mt-3'>
-                                            <label>CTC</label>
+                                            <label>Expected CTC</label>
                                             <div className='position-relative'>
                                                 <input name='ctc' value={this.state.user.ctc} onChange={(e)=>this.changeHandler(e)}  type='tel' placeholder='Please Enter CTC' className='mt-2 form-control' />
                                                 {this.state.ctcErr ? <p className='mb-0 formError'>{this.state.ctcErr}</p> : ""}
@@ -209,6 +231,13 @@ class Career extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Modal show={this.state.showModal} size="md" aria-labelledby="contained-modal-title-vcenter" centered>
+                    <Modal.Body className='text-center py-4'>
+                        <h4 className='mb-3'>Thanks for interested on us!</h4>
+                        <p>Our team will reach you shortly.</p>
+                        <Link title='LDR Survey' to="/" className='btn'>Home</Link>
+                    </Modal.Body>
+                </Modal>
                 <Footer />
             </>
         )
@@ -217,14 +246,17 @@ class Career extends React.Component {
 
 function mapStateToProps(state){
     return{
-        contactUsRes : state.contactUsData
+        careerRes : state.careerData
     }
 }
 
 const mapDispatchToProps = dispatch => {
     const extraProps = {
-        fetchContactUs: (data)=>{
-            dispatch(contactUs(data))
+        fetchCareer: (data)=>{
+            dispatch(career(data))
+        },
+        fetchCareerRes: (data)=>{
+            dispatch(careerRes(data))
         }
     }
     return extraProps;

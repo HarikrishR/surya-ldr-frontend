@@ -7,6 +7,7 @@ const initialState = {
     signInData : null,
     allUserData : "",
     contactUsData : null,
+    careerData : null,
 }
 
 const reducer = (state = initialState, action) => {
@@ -47,6 +48,12 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 contactUsData : action.contactUsRes
+            }
+
+        case actionTypes.CAREER:
+            return {
+                ...state,
+                careerData : action.careerRes
             }
 
         default:

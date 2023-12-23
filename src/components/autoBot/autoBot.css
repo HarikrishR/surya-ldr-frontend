@@ -1,7 +1,7 @@
 .chatBot {
     position: fixed;
     bottom: 75px;
-    right: 10px;
+    right: 15px;
     z-index: 100;
 }
 .chatBotTriggerBox {
@@ -14,8 +14,9 @@
     padding-left: 12px;
     position: fixed;
     bottom: 15px;
-    right: 10px;
+    right: 15px;
     z-index: 100;
+    cursor: pointer;
 }
 .chatBotTriggerBox img{
     width: 26px;

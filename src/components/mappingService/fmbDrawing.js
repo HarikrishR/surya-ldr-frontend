@@ -7,11 +7,13 @@ import aboutUsBg from '../../assets/images/aboutUsBg.jpg';
 
 const iniState = {
     user:{
+        name:'',
         emailAddress:'',
         phoneNumber:'',
         planning:'',
         reason:'',
     },
+    nameErr: null,
     emailAddressErr: null,
     phoneNumberErr: null,
     planningErr: null,
@@ -39,6 +41,9 @@ class FMBDrawing extends React.Component {
     submitNow = (e) =>{
         e.preventDefault();
 
+        if(!this.state.user.name) this.setState({nameErr: "Please Enter Name"});
+        else this.setState({nameErr: null});
+
         if(!this.state.user.emailAddress) 
             this.setState({emailAddressErr: "Please Enter Email Address"});
         else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(this.state.user.emailAddress))
@@ -46,6 +51,8 @@ class FMBDrawing extends React.Component {
         else this.setState({emailAddressErr: null});
 
         if(!this.state.user.phoneNumber) this.setState({phoneNumberErr: "Please Enter Phone Number"});
+        else if(!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i.test(this.state.user.phoneNumber))
+            this.setState({phoneNumberErr: "Please Enter valid Phone Number"});
         else this.setState({phoneNumberErr: null});
 
         if(!this.state.user.planning) this.setState({planningErr: "Please Select Plan"});
@@ -54,13 +61,15 @@ class FMBDrawing extends React.Component {
         if(!this.state.user.reason) this.setState({reasonErr: "Please Select Reason"});
         else this.setState({reasonErr: null});
 
-        var data = this.state.user;
-        if(data.name && data.emailAddress && data.phoneNumber && data.reason
-            && this.state.emailAddressErr === null
-        ){
-            console.log(this.state.user);
-            this.setState(iniState);
-        }
+        setTimeout(() => {
+            var data = this.state.user;
+            if(data.name && data.emailAddress && data.phoneNumber && data.reason && data.planning
+                && this.state.emailAddressErr === null && this.state.phoneNumberErr === null
+            ){
+                console.log(this.state.user);
+                this.setState(iniState);
+            }
+        }, 500);
     }
 
     render(){
@@ -74,6 +83,13 @@ class FMBDrawing extends React.Component {
                             <div className='offset-md-2 col-md-8'>
                                 <form>
                                     <div className='row'>
+                                        <div className='col-md-6 mt-3 mt-md-0'>
+                                            <label>Name</label>
+                                            <div className='position-relative'>
+                                                <input name='name' value={this.state.user.name} onChange={(e)=>this.changeHandler(e)}  type='text' placeholder='Please Enter Name' className='mt-2 form-control' />
+                                                {this.state.nameErr ? <p className='mb-0 formError'>{this.state.nameErr}</p> : ""}
+                                            </div>
+                                        </div>
                                         <div className='col-md-6 mt-3 mt-md-0'>
                                             <label>Email</label>
                                             <div className='position-relative'>

@@ -53,6 +53,8 @@ class SignUp extends React.Component {
         else this.setState({userNameErr: null});
 
         if(!this.state.user.phoneNumber) this.setState({phoneNumberErr: "Please Enter Phone Number"});
+        else if(!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i.test(this.state.user.phoneNumber))
+            this.setState({phoneNumberErr: "Please Enter valid Phone Number"});
         else this.setState({phoneNumberErr: null});
 
         if(!this.state.user.emailAddress) 
@@ -67,7 +69,7 @@ class SignUp extends React.Component {
         setTimeout(() => {
             var data = this.state.user;
             if(data.userName && data.phoneNumber && data.emailAddress && data.password
-                && this.state.emailAddressErr === null){
+                && this.state.emailAddressErr === null && this.state.phoneNumberErr === null){
                 this.props.fetchSignUp(data);
             }
         }, 500);
