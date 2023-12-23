@@ -16,7 +16,42 @@ const MappingServiceOptions = (props) => {
         text: "FMB Drawing", 
         link: "fmb-drawing",
         id: 3
-    }
+    },
+    {
+      text: "Topographical Survey",
+      link: "topographical-survey",
+      id: 4
+    },
+    {
+      text: "Contour Survey",
+      link: "contour-survey",
+      id: 5
+    },
+    {
+      text: "Layout Design and Marking",
+      link: "layout-design-marking",
+      id: 6
+    },
+    {
+      text: "Road Survey",
+      link: "road-survey",
+      id: 7
+    },
+    {
+      text: "Building Marking",
+      link: "building-marking",
+      id: 8
+    },
+    {
+      text: "Drone Survey",
+      link: "drone-survey",
+      id: 9
+    },
+    {
+      text: "DGPS Survey and Total Station and Drone Survey",
+      link: "dgps-survey",
+      id: 10
+    },
   ];
 
   const optionsMarkup = options.map((option) => (

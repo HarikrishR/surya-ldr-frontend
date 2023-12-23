@@ -15,7 +15,6 @@ import SignUp from "../signUp/signUp";
 import SampleSketches from "../sampleSketches/sampleSketches";
 import DashBoard from '../admin/dashBoard/dashBoard';
 import LandSurvey from '../services/landSurvey';
-import TopoGraphicalSurvey from '../services/topographicalSurvey';
 import PropertySurvey from '../services/propertySurvey';
 import LayoutSurvey from '../services/layoutSurvey';
 import BuildPlanSurvey from '../services/buildPlanSurvey';
@@ -31,6 +30,13 @@ import PageNotFound from '../pageNotFound/pageNotFound';
 import { connect } from "react-redux";
 import { userDataRes, isAuthenticatedRes } from '../../redux/actions/actions';
 import Cookies from 'js-cookie';
+import TopographicalSurvey from '../mappingService/topographicalSurvey';
+import ContourSurvey from '../mappingService/contourSurvey';
+import LayoutDesignMarking from '../mappingService/layoutDesign&Marking';
+import RoadSurvey from '../mappingService/roadSurvey';
+import BuildingMarking from '../mappingService/buildingMarking';
+import DroneSurvey from '../mappingService/droneSurvey';
+import DgpsSruvey from '../mappingService/dgpsSurvey';
 
 class Application extends React.Component {
     constructor(){
@@ -65,7 +71,6 @@ class Application extends React.Component {
                     <Route path="/sample-sketches" element={<SampleSketches />} />
                     <Route path="/contact-us" element={<ContactUs />} />
                     <Route path="/land-survey" element={<LandSurvey />} />
-                    <Route path="/topographical-survey" element={<TopoGraphicalSurvey />} />
                     <Route path="/property-survey" element={<PropertySurvey />} />
                     <Route path="/layout-survey" element={<LayoutSurvey />} />
                     <Route path="/build-plan" element={<BuildPlanSurvey />} />
@@ -83,6 +88,13 @@ class Application extends React.Component {
                     {/* <Route path="/sign-up" element={<SignUp />} /> */}
                     <Route path="/404" element={<PageNotFound />} />
                     <Route path="*" element={<Navigate to="/404" />} />
+                    <Route path="/topographical-survey" element={<TopographicalSurvey/>}/>
+                    <Route path="/contour-survey" element={<ContourSurvey/>}/>
+                    <Route path="/layout-design-marking" element={<LayoutDesignMarking/>}/>
+                    <Route path="/road-survey" element={<RoadSurvey/>}/>
+                    <Route path="/building-marking" element={<BuildingMarking/>}/>
+                    <Route path="/drone-survey" element={<DroneSurvey/>}/>
+                    <Route path="/dgps-survey" element={<DgpsSruvey/>}/>
                     {
                         this.props.isAuthenticated ? 
                         <>
