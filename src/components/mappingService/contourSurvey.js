@@ -79,7 +79,7 @@ class ContourSurvey extends React.Component {
                 <Banner title="Contour Survey" backgroundImage={aboutUsBg} />
                 <div className='mappingService'>
                     <div className='container'>
-=                        <div className='row'>
+                        <div className='row'>
                             <div className='offset-md-2 col-md-8'>
                                 <form>
                                     <div className='row'>

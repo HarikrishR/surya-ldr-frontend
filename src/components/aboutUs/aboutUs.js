@@ -7,7 +7,8 @@ import aboutUsBg from '../../assets/images/aboutUsBg.jpg';
 import ceoSignature from '../../assets/images/ceoSignature.webp';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
- 
+import Counter from "../counter/counter";
+
 class AboutUs extends React.Component {
 
     render(){
@@ -52,6 +53,7 @@ class AboutUs extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Counter />
                 <Footer />
             </>
         )

@@ -79,7 +79,7 @@ class FMBDrawing extends React.Component {
                 <Banner title="FMB Drawing" backgroundImage={aboutUsBg} />
                 <div className='mappingService'>
                     <div className='container'>
-=                        <div className='row'>
+                        <div className='row'>
                             <div className='offset-md-2 col-md-8'>
                                 <form>
                                     <div className='row'>

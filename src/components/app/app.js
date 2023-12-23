@@ -32,7 +32,7 @@ import { userDataRes, isAuthenticatedRes } from '../../redux/actions/actions';
 import Cookies from 'js-cookie';
 import TopographicalSurvey from '../mappingService/topographicalSurvey';
 import ContourSurvey from '../mappingService/contourSurvey';
-import LayoutDesignMarking from '../mappingService/layoutDesign&Marking';
+import LayoutDesignMarking from '../mappingService/layoutDesignMarking';
 import RoadSurvey from '../mappingService/roadSurvey';
 import BuildingMarking from '../mappingService/buildingMarking';
 import DroneSurvey from '../mappingService/droneSurvey';

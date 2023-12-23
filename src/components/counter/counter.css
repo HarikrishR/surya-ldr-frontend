@@ -1,0 +1,11 @@
+.counter {
+    padding: 60px 0;
+}
+.counter .counterNum {
+    font-family: 'jost-extra-bold';
+    font-size: 36px;
+    color: #fbd249;
+}
+.counter h5 {
+    font-family: 'dm-sans-extra-bold';
+}

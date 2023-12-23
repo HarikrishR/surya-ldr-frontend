@@ -2,10 +2,10 @@ import React from "react";
 import Header from "../navbar/navbar";
 import Footer from "../footer/footer";
 import Clients from "../clients/clients";
-import needOne from "../../assets/images/needs01.png"
-import needTwo from "../../assets/images/needs02.png"
-import needThree from "../../assets/images/needs03.png"
-import needFour from "../../assets/images/needs04.png"
+import needOne from "../../assets/images/needs01.png";
+import needTwo from "../../assets/images/needs02.png";
+import needThree from "../../assets/images/needs03.png";
+import needFour from "../../assets/images/needs04.png";
 import './index.css'
 
 class Index extends React.Component {

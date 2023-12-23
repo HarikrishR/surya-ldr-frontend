@@ -82,7 +82,7 @@ class BoundaryFixingSurvey extends React.Component {
                 <Banner title="Boundary Fixing & Surveying" backgroundImage={aboutUsBg} />
                 <div className='mappingService'>
                     <div className='container'>
-=                        <div className='row'>
+                        <div className='row'>
                             <div className='offset-md-2 col-md-8'>
                                 <form>
                                     <div className='row'>
