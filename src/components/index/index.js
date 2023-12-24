@@ -6,6 +6,10 @@ import needOne from "../../assets/images/needs01.png";
 import needTwo from "../../assets/images/needs02.png";
 import needThree from "../../assets/images/needs03.png";
 import needFour from "../../assets/images/needs04.png";
+import Counter from "../counter/counter";
+import md from "../../assets/images/md.webp"
+import ceo from "../../assets/images/ceo.webp"
+import chairMan from "../../assets/images/chairMan.webp"
 import './index.css'
 
 class Index extends React.Component {
@@ -21,8 +25,14 @@ class Index extends React.Component {
                     <p>LDR is one of the Best Land Survey companies in Chennai. It is the Top Land Survey Consultancy and Educational Trainer.</p>
                 </div>
             </div>
-            <div className="container">
-                <div className="indexAbt text-center">
+            <div className="iso">
+                <div className="container text-center">
+                    <h3 className="mb-3">India's 1st ISO Certified Survey Company</h3>
+                    <p className="m-0">ISO 9001:2015 | Certificate No : 1214Q243423</p>
+                </div>
+            </div>
+            <div className="indexAbt">
+                <div className="container text-center">
                     <h2>LaDdeR Survey Pvt Ltd</h2>
                     <p className="mb-0">LDR is one of the Best Land Survey companies in Chennai. It is the Top Land Survey Consultancy and Educational Trainer. We offer Land Survey Services, Boundary Survey Services, Topographical Survey Services, Interior Survey Services, Layout Survey Services, Building and Industrial Survey Services, Road Marking Survey Services, Combined FMB Sketch Services, Property Survey Services, Levelling Contour Services, and Proposed Building Planner Services. We have been working as land surveyors for 15 years. Ladder Survey Institute of Technology (LSIT) makes it possible for clients to find your drawing through a Google search. We give you a strong digital land survey strategy that makes it easy for clients to get in touch with you.</p>
                 </div>
@@ -92,6 +102,54 @@ class Index extends React.Component {
                                 <h3>Risk Prevention</h3>
                                 <p className="mb-0">Surveys identify potential hazards or limitations on the land, helping you make informed decisions about land use.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Counter />
+            <div className="ourManagement">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-6 col-lg-3">
+                            <div className="ourManagementBox position-relative">
+                                <h2 className="text-light">Our <br/>Management</h2>
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-lg-3">
+                            <div className="ourManagementBox position-relative">
+                                <div className="position-absolute ourManagementDesig">
+                                    <h4 className="m-0">CEO</h4>
+                                </div>
+                                <img src={ceo} alt="" className="w-100"/>
+                                <div className="ourManagementBoxBtm position-absolute">
+                                    <p className="mb-2">Dinesh M.R</p>
+                                    <h5 className="m-0">Chief Engineer</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-4 mt-lg-0 col-sm-6 col-lg-3">
+                            <div className="ourManagementBox position-relative">
+                                <div className="position-absolute ourManagementDesig">
+                                    <h4 className="m-0">MD</h4>
+                                </div>
+                                <img src={md} alt="" className="w-100"/>
+                                <div className="ourManagementBoxBtm position-absolute">
+                                    <p className="mb-2">Gangeyan R</p>
+                                    <h5 className="m-0">Chief Engineer</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-4 mt-lg-0 col-sm-6 col-lg-3">
+                           <div className="ourManagementBox position-relative">
+                               <div className="position-absolute ourManagementDesig">
+                                   <h4 className="m-0">CHAIR MAN</h4>
+                               </div>
+                               <img src={chairMan} alt="" className="w-100"/>
+                               <div className="ourManagementBoxBtm position-absolute">
+                                   <p className="mb-2">Sangeetha D</p>
+                                   <h5 className="m-0">Finance Officer</h5>
+                               </div>
+                           </div>
                         </div>
                     </div>
                 </div>

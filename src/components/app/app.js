@@ -30,7 +30,8 @@ import PageNotFound from '../pageNotFound/pageNotFound';
 import { connect } from "react-redux";
 import { userDataRes, isAuthenticatedRes } from '../../redux/actions/actions';
 import Cookies from 'js-cookie';
-import TopographicalSurvey from '../mappingService/topographicalSurvey';
+import TopographicalSurvey from '../services/topographicalSurvey';
+import TopographicalSurveyMapping from '../mappingService/topographicalSurveyMapping';
 import ContourSurvey from '../mappingService/contourSurvey';
 import LayoutDesignMarking from '../mappingService/layoutDesignMarking';
 import RoadSurvey from '../mappingService/roadSurvey';
@@ -89,6 +90,7 @@ class Application extends React.Component {
                     <Route path="/404" element={<PageNotFound />} />
                     <Route path="*" element={<Navigate to="/404" />} />
                     <Route path="/topographical-survey" element={<TopographicalSurvey/>}/>
+                    <Route path="/topographical-survey-mapping" element={<TopographicalSurveyMapping/>}/>
                     <Route path="/contour-survey" element={<ContourSurvey/>}/>
                     <Route path="/layout-design-marking" element={<LayoutDesignMarking/>}/>
                     <Route path="/road-survey" element={<RoadSurvey/>}/>

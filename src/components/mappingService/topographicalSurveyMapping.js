@@ -21,7 +21,7 @@ const iniState = {
     surveySubmit: null
 }
 
-class TopographicalSurvey extends React.Component {
+class TopographicalSurveyMapping extends React.Component {
     constructor(){
         super();
         this.state = iniState
@@ -143,4 +143,4 @@ class TopographicalSurvey extends React.Component {
     }
 }
 
-export default TopographicalSurvey;
+export default TopographicalSurveyMapping;

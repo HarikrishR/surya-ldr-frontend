@@ -73,6 +73,10 @@ a{
   color: #423639;
   text-decoration: none;
 }
+p,
+ul li {
+  font-size: 1.025rem;
+}
 h2 {
   font-family: 'dm-sans-extra-bold'; 
   font-size: 38px;

@@ -19,7 +19,7 @@ const MappingServiceOptions = (props) => {
     },
     {
       text: "Topographical Survey",
-      link: "topographical-survey",
+      link: "topographical-survey-mapping",
       id: 4
     },
     {

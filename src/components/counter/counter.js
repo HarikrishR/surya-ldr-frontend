@@ -28,7 +28,7 @@ class Counter extends React.Component {
                                     <h5>Total Projects</h5>
                                 </div>
                             </div>
-                            <div className='col-sm-6 col-md-3 text-center'>
+                            <div className='mt-3 mt-sm-0 col-sm-6 col-md-3 text-center'>
                                 <div className='counterBox'>
                                     <img src={success} alt='Projects' className='img-fluid mb-2'/>
                                     <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
@@ -41,7 +41,7 @@ class Counter extends React.Component {
                                     <h5>Success</h5>
                                 </div>
                             </div>
-                            <div className='col-sm-6 col-md-3 text-center'>
+                            <div className='mt-3 mt-md-0 col-sm-6 col-md-3 text-center'>
                                 <div className='counterBox'>
                                     <img src={rating} alt='Projects' className='img-fluid mb-2'/>
                                     <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
@@ -54,7 +54,7 @@ class Counter extends React.Component {
                                     <h5>Customer Satisified</h5>
                                 </div>
                             </div>
-                            <div className='col-sm-6 col-md-3 text-center'>
+                            <div className='mt-3 mt-md-0 col-sm-6 col-md-3 text-center'>
                                 <div className='counterBox'>
                                     <img src={like} alt='Projects' className='img-fluid mb-2'/>
                                     <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
