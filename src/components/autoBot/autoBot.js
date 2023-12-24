@@ -30,7 +30,7 @@ class AutoBot extends React.Component {
                     :
                     ""
                 }
-                <div className='chatBotTriggerBox'  onClick={()=>this.showHide()}>
+                <div className={this.state.showChat ? 'chatBotTriggerBox show' : 'chatBotTriggerBox'}  onClick={()=>this.showHide()}>
                     <img src={chatBot} alt='LDR Bot' />
                 </div>
                 {/* <div className='chatBot'>

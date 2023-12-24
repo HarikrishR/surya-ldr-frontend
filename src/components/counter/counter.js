@@ -20,51 +20,51 @@ class Counter extends React.Component {
                                     <img src={project} alt='Projects' className='img-fluid mb-2'/>
                                     <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
                                       {({ isVisible }) => (
-                                        <div style={{ height: 60 }}>
+                                        <div style={{ height: 55 }}>
                                           {isVisible ? <CountUp className='counterNum' end={11349} /> : null}
                                         </div>
                                       )}
                                     </VisibilitySensor>
-                                    <h5>Total Projects</h5>
+                                    <h5 className='mb-0'>Total Projects</h5>
                                 </div>
                             </div>
-                            <div className='mt-3 mt-sm-0 col-sm-6 col-md-3 text-center'>
+                            <div className='mt-4 mt-sm-0 col-sm-6 col-md-3 text-center'>
                                 <div className='counterBox'>
                                     <img src={success} alt='Projects' className='img-fluid mb-2'/>
                                     <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
                                       {({ isVisible }) => (
-                                        <div style={{ height: 60 }}>
+                                        <div style={{ height: 55 }}>
                                           {isVisible ? <CountUp className='counterNum' end={11089} /> : null}
                                         </div>
                                       )}
                                     </VisibilitySensor>
-                                    <h5>Success</h5>
+                                    <h5 className='mb-0'>Success</h5>
                                 </div>
                             </div>
-                            <div className='mt-3 mt-md-0 col-sm-6 col-md-3 text-center'>
+                            <div className='mt-4 mt-md-0 col-sm-6 col-md-3 text-center'>
                                 <div className='counterBox'>
                                     <img src={rating} alt='Projects' className='img-fluid mb-2'/>
                                     <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
                                       {({ isVisible }) => (
-                                        <div style={{ height: 60 }}>
+                                        <div style={{ height: 55 }}>
                                           {isVisible ? <CountUp className='counterNum' end={9005} /> : null}
                                         </div>
                                       )}
                                     </VisibilitySensor>
-                                    <h5>Customer Satisified</h5>
+                                    <h5 className='mb-0'>Customer Satisified</h5>
                                 </div>
                             </div>
-                            <div className='mt-3 mt-md-0 col-sm-6 col-md-3 text-center'>
+                            <div className='mt-4 mt-md-0 col-sm-6 col-md-3 text-center'>
                                 <div className='counterBox'>
                                     <img src={like} alt='Projects' className='img-fluid mb-2'/>
                                     <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
                                       {({ isVisible }) => (
-                                        <div style={{ height: 60 }}>
+                                        <div style={{ height: 55 }}>
                                           {isVisible ? <CountUp className='counterNum' end={11032} /> : null}
                                         </div>
                                       )}
                                     </VisibilitySensor>
-                                    <h5>Likes</h5>
+                                    <h5 className='mb-0'>Likes</h5>
                                 </div>
                             </div>
                         </div>

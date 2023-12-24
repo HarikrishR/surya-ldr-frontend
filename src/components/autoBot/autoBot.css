@@ -1,24 +1,34 @@
 .chatBot {
     position: fixed;
-    bottom: 75px;
+    bottom: 80px;
     right: 15px;
     z-index: 100;
 }
 .chatBotTriggerBox {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: #031f4d;
     align-items: center;
     display: flex;
-    padding-left: 12px;
+    padding-left: 14px;
     position: fixed;
-    bottom: 15px;
-    right: 15px;
+    bottom: 20px;
+    right: 25px;
     z-index: 100;
     cursor: pointer;
+    transition: all .35s;
+}
+.chatBotTriggerBox.show {
+    width: 50px;
+    height: 50px;
+    padding-left: 12px;
 }
 .chatBotTriggerBox img{
+    width: 32px;
+    transition: all .35s;
+}
+.chatBotTriggerBox.show img{
     width: 26px;
 }
 .chatBot .react-chatbot-kit-chat-inner-container {
