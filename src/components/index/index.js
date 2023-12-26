@@ -59,7 +59,7 @@ class Index extends React.Component {
                                 <li>Surrounding details</li>
                                 <li>Survey Numbers</li>
                                 <li>Building projections limits</li>
-                                <li>Vacant Land & Developed area's percentage</li>
+                                <li>Vacant & Developed area's percentage</li>
                                 <li>Available at 24X7</li>
                             </ul>
                         </div>

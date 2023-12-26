@@ -55,7 +55,7 @@ class Footer extends React.Component {
                                 <Link title='Twitter' to="https://twitter.com/LdrLtd" target='_blank'>
                                     <img src={twitter} alt='Twitter' className='mx-2' />
                                 </Link>
-                                <Link title='Instagram' to="https://www.instagram.com/ldr_pvt_ltd/">
+                                <Link title='Instagram' to="https://www.instagram.com/ldr_pvt_ltd/"  target='_blank'>
                                     <img src={instagram} alt='Instagram' className='ms-2' />
                                 </Link>
                             </div>
