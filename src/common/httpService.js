@@ -26,3 +26,9 @@ export function post (url, config, headers) {
     const postConfig = Object.assign({}, {method: method, url, data: config, headers: headers})
     return customRequest(postConfig);
 }
+
+export function formDataPost (url, config, headers) {
+    let method = "post";
+    const postConfig = Object.assign({}, {method: method, url, data: config, headers: { "Content-Type": "multipart/form-data" }})
+    return customRequest(postConfig);
+}

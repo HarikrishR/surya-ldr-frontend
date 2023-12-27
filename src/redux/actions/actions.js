@@ -1,6 +1,6 @@
 import { store } from "../store";
 import * as actionTypes from "./actionTypes";
-import { get, post } from "../../common/httpService";
+import { get, post, formDataPost } from "../../common/httpService";
 
 var endPoint = "http://localhost:8000";
 
@@ -74,7 +74,7 @@ export const contactUsRes = (contactUsRes) => ({
 })
 
 export const career = (data) => (dispatch) => {
-    post(endPoint + "/career", data).then((result)=>{
+    formDataPost(endPoint + "/career", data).then((result)=>{
         store.dispatch(careerRes(result.data))
     })
     .catch((exception)=>{

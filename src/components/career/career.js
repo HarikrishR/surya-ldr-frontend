@@ -44,7 +44,7 @@ class Career extends React.Component {
 
     changeHandler = (e) => {
         const name = e.target.name;
-        const value = e.target.value;
+        const value = name === 'cv' ? e.target.files[0] : e.target.value;
         this.setState({
             user:{
               ...this.state.user,
@@ -90,15 +90,18 @@ class Career extends React.Component {
         else this.setState({ctcErr: null});
 
         if(!this.state.user.cv) this.setState({cvErr: "Please Select CV"});
-        else this.setState({cvErr: null});
+        else {
+            console.log(this.state.user.cv);
+            this.setState({cvErr: null});
+        }
 
         setTimeout(() => {
             var data = this.state.user;
             if(data.name && data.emailAddress && data.phoneNumber && data.dob && data.gender && data.address && data.role && data.experience
                 && data.ctc && data.cv && this.state.emailAddressErr === null && this.state.phoneNumberErr === null
             ){
-                console.log(data);
-                // this.props.fetchCareer(data);
+                // console.log(data);
+                this.props.fetchCareer(data);
             }
         }, 500);
         
@@ -217,7 +220,7 @@ class Career extends React.Component {
                                         <div className='col-md-12 mt-3 mb-1'>
                                             <label>Resume</label>
                                             <div className='position-relative'>
-                                                <input name='cv' value={this.state.user.cv} onChange={(e)=>this.changeHandler(e)}  type='file' placeholder='Please Enter CV' className='mt-2 form-control' />
+                                                <input name='cv' onChange={(e)=>this.changeHandler(e)}  type='file' placeholder='Please Enter CV' className='mt-2 form-control' accept=".doc,.docx,.pdf" />
                                                 {this.state.cvErr ? <p className='mb-0 formError'>{this.state.cvErr}</p> : ""}
                                             </div>
                                         </div>
