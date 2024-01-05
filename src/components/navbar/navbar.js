@@ -6,7 +6,7 @@ import logo from '../../assets/images/logo.webp';
 import location from '../../assets/images/location.svg';
 import phone from '../../assets/images/phone.svg';
 import mail from '../../assets/images/mail.svg';
-import upArrow from "../../assets/images/upArrow.png"
+// import upArrow from "../../assets/images/upArrow.png"
 import './navbar.css';
 import Cookies from 'js-cookie';
 import { connect } from "react-redux";
@@ -23,8 +23,8 @@ class Header extends React.Component {
 
     render(){
         return(
-            <div className='header px-4'>
-                <div className='row navTop py-2 d-none d-md-flex' id='navbar'>
+            <>
+                <div className='row navTop py-2 px-4 d-none d-md-flex' id='navbar'>
                     <div className='col-md-6'>
                         <div className='d-flex align-middle'>
                             <img src={location} alt='location' className='me-2'/>
@@ -44,7 +44,7 @@ class Header extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Navbar expand="lg" className="bg-body-tertiary py-3">
+                <Navbar expand="lg" className="bg-body-tertiary py-3 px-4 stickyNav">
                     <Navbar.Brand href="/">
                         <img src={logo} alt='LDR Survey' className='logo' />
                     </Navbar.Brand>
@@ -57,9 +57,7 @@ class Header extends React.Component {
                         <Link title='Home' to="/" className='nav-link'>Home</Link>
                         <Link title='About Us' to="/about-us" className='nav-link'>About Us</Link>
                         <Link title='Services' to="/services" className='nav-link'>Services</Link>
-                        {/* <Link title='Products' to="/products" className='nav-link'>Products</Link> */}
                         <Link title='Sample Sketches' to="/sample-sketches" className='nav-link'>Sample Sketches</Link>
-                        
                         {
                         this.props.isAuthenticated && this.props.userData.role === "admin" ? 
                         <Link title='Contact Us' to="/dashboard" className='nav-link'>Dashboard</Link>
@@ -90,7 +88,7 @@ class Header extends React.Component {
                     </div>
                 </a> */}
                 <AutoBot />
-            </div>
+            </>
         )
     }
 }

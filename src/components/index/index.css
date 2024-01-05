@@ -2,7 +2,7 @@
     background-image: url('../../assets/images/index-banner.jpg');
     background-size: cover;
     color: #fff;
-    padding: 180px 40px 180px 80px;
+    padding: 120px 60px 120px 100px;
     background-attachment: fixed;
 }
 .bannerOverlay {
@@ -25,6 +25,74 @@
     font-family: 'jost-medium';
     font-size: 20px;
     width: 70%;
+}
+.banner .homeBooking {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    width: 360px;
+    margin-left: auto;
+}
+.banner .homeBooking label,
+.banner .homeBooking h3{
+    color: #000;
+}
+.banner .homeBooking h3{
+    font-family: 'dm-sans-bold';
+}
+.banner .homeBooking label,
+.banner .homeBooking .form-control,
+.banner .homeBooking .form-select {
+    font-family: 'jost-regular';
+}
+.banner .homeBooking .form-control,
+.banner .homeBooking .form-select {
+    border-top: 0;
+    border-right: 0px;
+    border-left: 0px;
+    padding-left: 2.5px;
+}
+.banner .homeBooking .formError {
+    color: #f00100;
+    font-size: .785rem;
+    position: absolute;
+    bottom: -5px;
+}
+@media (min-width: 769px) and (max-width: 1199px) {
+    .bannerDes h1 {
+        font-size: 50px;
+    }
+}
+@media (min-width: 546px) and (max-width: 1112px) {
+    .banner {
+        padding: 100px 50px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .banner .homeBooking {
+        margin-left: unset;
+    }
+}
+@media screen and (max-width: 768px) {
+    .bannerDes h1 {
+        font-size: 40px;
+    }
+    .bannerDes p {
+        width: auto;
+    }
+    .needs .needsTop p{
+        width: auto;
+    }
+}
+@media screen and (max-width: 545px) {
+    .banner {
+        padding: 90px 20px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .banner .homeBooking {
+        width: auto;
+    }
 }
 .iso {
     padding: 30px 0;
@@ -50,6 +118,12 @@
 }
 .indexAbt p{
     font-family: 'jost-regular';
+}
+.indexServices {
+    padding: 60px 0;
+}
+.indexServices h2::after {
+    margin: unset;
 }
 .whyChoose {
     padding: 60px 0;
@@ -113,27 +187,11 @@
     background: #fff;
     padding: 20px 15px;
 }
-@media screen and (max-width: 425px) {
-    .banner {
-        padding: 90px 20px;
-    }
-}
 /* @media screen and (max-width: 768px) {
     .needs .needsTop p{
         width: auto;
     }
 } */
-@media screen and (max-width: 768px) {
-    .bannerDes h1 {
-        font-size: 40px;
-    }
-    .bannerDes p {
-        width: auto;
-    }
-    .needs .needsTop p{
-        width: auto;
-    }
-}
 .ourManagement {
     padding: 60px 0;
     background: linear-gradient( rgba(0,0,0,0.4), rgba(0,0,0, 0.6) ), url('../../assets/images/ourManagementBg.png') 50% 0 no-repeat fixed;

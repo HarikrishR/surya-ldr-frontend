@@ -7,13 +7,17 @@ import needTwo from "../../assets/images/needs02.png";
 import needThree from "../../assets/images/needs03.png";
 import needFour from "../../assets/images/needs04.png";
 import Counter from "../counter/counter";
-import md from "../../assets/images/md.webp"
-import ceo from "../../assets/images/ceo.webp"
-import chairMan from "../../assets/images/chairMan.webp"
+import md from "../../assets/images/md.webp";
+import ceo from "../../assets/images/ceo.webp";
+import chairMan from "../../assets/images/chairMan.webp";
+// import ServiceCarousel from "../serviceCarousel/serviceCarousel";
+import HomeContact from "../homeContact/homeContact";
 import './index.css'
 
 class Index extends React.Component {
-
+    constructor(){
+        super();
+    }
   render() {
     return (
         <>
@@ -21,8 +25,18 @@ class Index extends React.Component {
             <div className="banner position-relative">
                 <div className="bannerOverlay position-absolute"></div>
                 <div className="bannerDes">
-                    <h1>LDR Survey Pvt Ltd</h1>
-                    <p>LDR is one of the Best Land Survey companies in Chennai. It is the Top Land Survey Consultancy and Educational Trainer.</p>
+                    <div className="row">
+                        <div className="col-lg-7 col-xl-8 align-self-center">
+                            <h1 className="mb-3">LDR Survey Pvt Ltd</h1>
+                            <p>LDR is one of the Best Land Survey companies in Chennai. It is the Top Land Survey Consultancy and Educational Trainer.</p>
+                        </div>
+                        <div className="mt-3 mt-lg-0 col-md-7 col-lg-5 col-xl-4">
+                            <div className="homeBooking">
+                                <h3 className="text-center mb-3">Book Survey</h3>
+                                <HomeContact />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="iso">
@@ -37,6 +51,12 @@ class Index extends React.Component {
                     <p className="mb-0">LDR is one of the Best Land Survey companies in Chennai. It is the Top Land Survey Consultancy and Educational Trainer. We offer Land Survey Services, Boundary Survey Services, Topographical Survey Services, Interior Survey Services, Layout Survey Services, Building and Industrial Survey Services, Road Marking Survey Services, Combined FMB Sketch Services, Property Survey Services, Levelling Contour Services, and Proposed Building Planner Services. We have been working as land surveyors for 15 years. Ladder Survey Institute of Technology (LSIT) makes it possible for clients to find your drawing through a Google search. We give you a strong digital land survey strategy that makes it easy for clients to get in touch with you.</p>
                 </div>
             </div>
+            {/* <div className="indexServices"> */}
+                {/* <div className="container"> */}
+                    {/* <h2>Our Services</h2> */}
+                    {/* <ServiceCarousel /> */}
+                {/* </div> */}
+            {/* </div> */}
             <div className="whyChoose position-relative text-center">
                 <div className="whyChooseOverlay position-absolute"></div>
                 <div className="container position-relative">

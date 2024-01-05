@@ -1,6 +1,12 @@
-.header {
+.navTop,
+.stickyNav {
     font-family: 'jost-medium';
     background-color: #f8f9fa;
+}
+.stickyNav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 .navTop p {
     color: #5e5058;

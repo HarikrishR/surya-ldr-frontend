@@ -79,7 +79,7 @@ ul li {
 }
 h2 {
   font-family: 'dm-sans-extra-bold'; 
-  font-size: 38px;
+  font-size: 32px;
   position: relative;
   display: inline-block;
   padding: 0 0 16px 0;
@@ -87,8 +87,8 @@ h2 {
 }
 h2::after {
   position: absolute;
-  width: 75px;
-  height: 5px;
+  width: 50px;
+  height: 3px;
   background: #f00100;
   content: '';
   bottom: 0;
