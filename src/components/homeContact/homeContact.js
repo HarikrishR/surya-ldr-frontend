@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { career, careerRes } from '../../redux/actions/actions';
 import Modal from 'react-bootstrap/Modal';
 import {
-    Country,
     State,
     City,
   } from "country-state-city";
@@ -52,8 +51,8 @@ class HomeContact extends React.Component {
                 if(val.name === value)
                     stateCode = val.isoCode
             })
-            var state = State.getStateByCodeAndCountry(stateCode, 'IN');
-            var city = City.getCitiesOfState('IN', stateCode)
+            var state = State.getStateByCodeAndCountry(stateCode, this.state.countryCode);
+            var city = City.getCitiesOfState(this.state.countryCode, stateCode)
             setTimeout(() => {
                 console.log(state.name);
                 this.setState({
