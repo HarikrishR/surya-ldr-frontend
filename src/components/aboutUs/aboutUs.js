@@ -32,7 +32,7 @@ class AboutUs extends React.Component {
                                 <Tabs
                                 defaultActiveKey="history"
                                 id="uncontrolled-tab-example"
-                                className="mb-3"
+                                className="mb-4"
                                 >
                                     <Tab eventKey="history" title="History">
                                         <p className='mb-0'>LDR Land Survey Pvt Ltd was established in 2006 in Chennai, India. It has been operating having the status of Land Survey Data handled since 2006. Since that time the organization has extended its operations. Having headquarters in Chennai and has an official Land Survey development team in Chennai. The Company provides services in the fields of Topographical survey, Digital Land Photogrammetry, Boundary survey, ATS Survey, Drain Survey, Site Contour Survey, FMB, LIDAR, Mobile LIDAR, GIS, CAD, PLS CAD, BIM, Satellite survey, Total Station survey, DGPS Survey and UAV (DRONE Survey) etc. We use the latest technology and have qualified, expert, well trained, well behaved staff with a wide range of experience.</p>

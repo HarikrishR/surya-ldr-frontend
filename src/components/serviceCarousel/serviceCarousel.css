@@ -1,0 +1,48 @@
+.serviceItems {
+    overflow: hidden;
+    border: 1px solid #d7d7d7;
+    border-radius: 8px;
+    margin: 0 15px;
+}
+.serviceItems::before{
+    position: absolute;
+    background: #4d4b4ba1;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.serviceItems img {
+    height: 175px;
+    width: 100%;
+}
+.serviceItems h3{
+    font-family: 'dm-sans-extra-bold';
+    font-size: 18px;
+}
+.serviceItems div {
+    color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0px;
+    padding: 100px 10px 10px 20px;
+}
+.serviceItems a{
+    font-family: 'jost-medium';
+}
+.serviceContainer .react-multiple-carousel__arrow::before {
+    color: #6e6c6c;
+}
+.serviceContainer button.react-multiple-carousel__arrow--left, 
+.serviceContainer button.react-multiple-carousel__arrow--right {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+}
+.serviceContainer button.react-multiple-carousel__arrow--left {
+    left: 0;
+}
+.serviceContainer button.react-multiple-carousel__arrow--right {
+    right: 0;
+}

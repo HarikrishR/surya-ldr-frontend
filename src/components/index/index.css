@@ -122,9 +122,6 @@
 .indexServices {
     padding: 60px 0;
 }
-.indexServices h2::after {
-    margin: unset;
-}
 .whyChoose {
     padding: 60px 0;
     padding-right: calc(var(--bs-gutter-x) * .5);
@@ -186,6 +183,7 @@
 .needs .needsBox {
     background: #fff;
     padding: 20px 15px;
+    border-radius: 8px;
 }
 /* @media screen and (max-width: 768px) {
     .needs .needsTop p{
@@ -254,4 +252,18 @@
     .ourManagement h2{
         font-size: 30px;
     }
+}
+.indexFaq {
+    padding: 60px 0;
+}
+.indexFaq .accordion h2 {
+    display: block;
+    padding: 0;
+    margin-bottom: 0;
+}
+.indexFaq .accordion h2::after{
+    content: none;
+}
+.indexFaq .accordion p{
+    font-family: 'jost-regular';
 }

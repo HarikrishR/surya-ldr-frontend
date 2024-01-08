@@ -1,4 +1,5 @@
 import React from "react";
+import Accordion from 'react-bootstrap/Accordion';
 import Header from "../navbar/navbar";
 import Footer from "../footer/footer";
 import Clients from "../clients/clients";
@@ -10,7 +11,7 @@ import Counter from "../counter/counter";
 import md from "../../assets/images/md.webp";
 import ceo from "../../assets/images/ceo.webp";
 import chairMan from "../../assets/images/chairMan.webp";
-// import ServiceCarousel from "../serviceCarousel/serviceCarousel";
+import ServiceCarousel from "../serviceCarousel/serviceCarousel";
 import HomeContact from "../homeContact/homeContact";
 import './index.css'
 
@@ -51,12 +52,13 @@ class Index extends React.Component {
                     <p className="mb-0">LDR is one of the Best Land Survey companies in Chennai. It is the Top Land Survey Consultancy and Educational Trainer. We offer Land Survey Services, Boundary Survey Services, Topographical Survey Services, Interior Survey Services, Layout Survey Services, Building and Industrial Survey Services, Road Marking Survey Services, Combined FMB Sketch Services, Property Survey Services, Levelling Contour Services, and Proposed Building Planner Services. We have been working as land surveyors for 15 years. Ladder Survey Institute of Technology (LSIT) makes it possible for clients to find your drawing through a Google search. We give you a strong digital land survey strategy that makes it easy for clients to get in touch with you.</p>
                 </div>
             </div>
-            {/* <div className="indexServices"> */}
-                {/* <div className="container"> */}
-                    {/* <h2>Our Services</h2> */}
-                    {/* <ServiceCarousel /> */}
-                {/* </div> */}
-            {/* </div> */}
+            <div className="indexServices">
+                <div className="container">
+                    <div className="text-center"><h2>Our Services</h2></div>
+                    
+                    <div className="mt-3"><ServiceCarousel/></div>
+                </div>
+            </div>
             <div className="whyChoose position-relative text-center">
                 <div className="whyChooseOverlay position-absolute"></div>
                 <div className="container position-relative">
@@ -170,6 +172,43 @@ class Index extends React.Component {
                                    <h5 className="m-0">Finance Officer</h5>
                                </div>
                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="indexFaq">
+                <div className="container">
+                    <div className="row">
+                        <div className="offset-md-2 col-md-8">
+                            <div className="text-center">
+                                <h2>Faq's</h2>
+                            </div>
+                            <Accordion>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>How many branches does your company Have?</Accordion.Header>
+                                    <Accordion.Body>
+                                        <p className="m-0">LDR Survey Pvt Ltd has established its presence in multiple strategic locations to better serve you. Currenty, Our Main Office is : Chennai, Other branches are : Bangalore, Hyderabad, Tirupati</p>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="1">
+                                    <Accordion.Header>What is Land Survey?</Accordion.Header>
+                                    <Accordion.Body>
+                                        <p className="m-0">Land Surveying is the process of mapping a piece of land exactly. Land surveyors use tools, such as global locating systems, to create a two-dimensional map. The study will identify the limits of a parcel, map the land, and identify the locations of natural and human-made sites.</p>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="2">
+                                    <Accordion.Header>Why is Land Surveying is important?</Accordion.Header>
+                                    <Accordion.Body>
+                                        <p className="m-0">Before you purchase a property or start any primary construction, surveys should always be carried out. These are two significant investments requiring overall land knowledge. For example, someone who buys or builds a wall on a property should do a border check so that they know how far their land goes. Blow an investigation may in the future cause legal or personal difficulties, like building a wall on the property of another.</p>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="3">
+                                    <Accordion.Header>What will a land survey cost?</Accordion.Header>
+                                    <Accordion.Body>
+                                        <p className="m-0">The cost of a land survey depends on certain different factors:Size of the propertyType of survey performed.Project of the surveyNumber and size of enhancement on the propertyLand of the property If you have a question regarding a particular piece of property, LDR Survey Pvt Ltd is happy to give you a fair, illustrate quote to complete your project.</p>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
                         </div>
                     </div>
                 </div>

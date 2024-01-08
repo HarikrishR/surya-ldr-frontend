@@ -6,7 +6,7 @@
 .stickyNav {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 2000;
 }
 .navTop p {
     color: #5e5058;

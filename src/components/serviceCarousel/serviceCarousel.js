@@ -1,65 +1,172 @@
-// import React from 'react';
-// import './serviceCarousel.css';
-// import { Button } from 'primereact/button';
-// import { Carousel } from 'primereact/carousel';
-// import { Tag } from 'primereact/tag';
-// // import { ProductService } from './service/ProductService';
-// import { ProductService } from './products';
+import React from 'react';
+import './serviceCarousel.css';
+import { Link } from "react-router-dom";
+import landSurvey from '../../assets/images/services/landsurvey.webp';
+import topoGraphical from '../../assets/images/services/topographical.webp';
+import propertySurvey from '../../assets/images/services/propertySurvey.webp';
+import reSurvey from '../../assets/images/services/reSurvey.webp';
+import bpSurvey from '../../assets/images/services/bpSurvey.webp';
+import dSurvey from '../../assets/images/services/dSurvey.webp';
+import idSurvey from '../../assets/images/services/idSurvey.jpg';
+import loSurvey from '../../assets/images/services/loSurvey.jpeg';
+import Carousel from 'react-multi-carousel';
+import fmb from '../../assets/images/services/fmb.png'
+import 'react-multi-carousel/lib/styles.css';
 
-// class ServiceCarousel extends React.Component {
-//     constructor(){
-//         super();
-//         this.state = {
-//             products: ProductService,
-//             responsiveOptions : [
-//                 {
-//                     breakpoint: '1199px',
-//                     numVisible: 3,
-//                     numScroll: 1
-//                 },
-//                 {
-//                     breakpoint: '991px',
-//                     numVisible: 2,
-//                     numScroll: 1
-//                 },
-//                 {
-//                     breakpoint: '767px',
-//                     numVisible: 1,
-//                     numScroll: 1
-//                 }
-//             ]
-//         }
-//     }
+class ServiceCarousel extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+        }
+    }
 
-//     productTemplate = (product) => {
-//         return (
-//             <div className="border-1 surface-border border-round m-2 text-center py-5 px-3">
-//                 <div className="mb-3">
-//                     <img src={`https://primefaces.org/cdn/primereact/images/product/${product.image}`} alt={product.name} className="w-6 shadow-2" />
-//                 </div>
-//                 <div>
-//                 <h4 className="mb-1">{product.name}</h4>
-//                     <h6 className="mt-0 mb-3">${product.price}</h6>
-                    
-//                     <div className="mt-5 flex flex-wrap gap-2 justify-content-center">
-//                         <Button icon="pi pi-search" rounded />
-//                         <Button icon="pi pi-star-fill" rounded severity="success" />
-//                     </div>
+    render(){
+        return(
+            <>
+                <Carousel
+                  additionalTransfrom={0}
+                  arrows
+                  autoPlaySpeed={3000}
+                  centerMode={false}
+                  className="serviceContainer"
+                  containerClass=""
+                  dotListClass=""
+                  draggable
+                  focusOnSelect={false}
+                  infinite={false}
+                  itemClass=""
+                  keyBoardControl
+                  minimumTouchDrag={80}
+                  pauseOnHover
+                  renderArrowsWhenDisabled={false}
+                  renderButtonGroupOutside={true}
+                  renderDotsOutside={false}
+                  responsive={{
+                    superLargeDesktop: {
+                      // the naming can be any, depends on you.
+                      breakpoint: { max: 4000, min: 1299 },
+                      items: 4,
+                      partialVisibilityGutter: 40
+                    },
+                    desktop: {
+                        breakpoint: {
+                            max: 1299,
+                            min: 1024
+                        },
+                        items: 3,
+                        partialVisibilityGutter: 40
+                    },
+                    mobile: {
+                      breakpoint: {
+                        max: 500,
+                        min: 0
+                      },
+                      items: 1,
+                      partialVisibilityGutter: 30
+                    },
+                    tablet: {
+                      breakpoint: {
+                        max: 1024,
+                        min: 501
+                      },
+                      items: 2,
+                      partialVisibilityGutter: 30
+                    }
+                  }}
+                  rewind={false}
+                  rewindWithAnimation={false}
+                  rtl={false}
+                  shouldResetAutoplay
+                  showDots={false}  
+                  sliderClass=""
+                  slidesToSlide={1}
+                  swipeable
+                >
+                    <div className='serviceItems position-relative'>
+                        <Link title='Land Survey' to="/land-survey">
+                            <img src={landSurvey} alt="Land Survey" className="img" />
+                            <div className='position-absolute'>
+                                <h3 className='mb-2'>Land Survey</h3>
+                                <a>Explore</a>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className='serviceItems position-relative'>
+                        <Link title='Land Survey' to="/topographical-survey">
+                        <img src={topoGraphical} alt="Topographical Survey" className="img" />
+                            <div className='position-absolute'>
+                                <h3 className='mb-2'>Topographical Survey</h3>
+                                <a>Explore</a>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className='serviceItems position-relative'>
+                        <Link title='Property Survey' to="/property-survey">
+                        <img src={propertySurvey} alt="Property Survey" className="img" />
+                            <div className='position-absolute'>
+                                <h3 className='mb-2'>Property Survey</h3>
+                                <a>Explore</a>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className='serviceItems position-relative'>
+                        <Link title='Layout Survey' to="/layout-survey">
+                        <img src={loSurvey} alt="Layout Survey" className="img" />
+                            <div className='position-absolute'>
+                                <h3 className='mb-2'>Layout Survey</h3>
+                                <a>Explore</a>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className='serviceItems position-relative'>
+                    <img src={bpSurvey} alt="Building Plan Survey" className="img" />
+                        <Link title='Building Plan Survey' to="/build-plan">
+                            <div className='position-absolute'>
+                                <h3 className='mb-2'>Building Plan Survey</h3>
+                                <a>Explore</a>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className='serviceItems position-relative'>
+                    <img src={idSurvey} alt="Interior Survey" className="img" />
+                        <Link title='Interior Survey' to="/interior-survey">
+                            <div className='position-absolute'>
+                                <h3 className='mb-2'>Interior Survey</h3>
+                                <a>Explore</a>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className='serviceItems position-relative'>
+                    <img src={reSurvey} alt="Real Estate Survey" className="img" />
+                        <Link title='Real Estate Survey' to="/real-estate">
+                            <div className='position-absolute'>
+                                <h3 className='mb-2'>Real Estate Survey</h3>
+                                <a>Explore</a>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className='serviceItems position-relative'>
+                    <img src={dSurvey} alt="Digital Survey" className="img" />
+                        <Link title='Digital Survey' to="/digital-survey">
+                            <div className='position-absolute'>
+                                <h3 className='mb-2'>Digital Survey</h3>
+                                <a>Explore</a>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className='serviceItems position-relative'>
+                    <img src={fmb} alt="Combined FMB Sketches" className="img" />
+                        <Link title='Combined FMB Sketches' to="/fmb-sketches">
+                            <div className='position-absolute'>
+                                <h3 className='mb-2'>Combined FMB Sketches</h3>
+                                <a>Explore</a>
+                            </div>
+                        </Link>
+                    </div>
+                </Carousel>
+            </>
+        )
+    }
+}
 
-//                 </div>
-//             </div>
-//         );
-//     };
-
-//     render(){
-//         return(
-//             <>
-//                 <div className="card">
-//                     <Carousel value={this.state.products} numVisible={3} numScroll={3} responsiveOptions={this.state.responsiveOptions} itemTemplate={this.productTemplate} />
-//                 </div>
-//             </>
-//         )
-//     }
-// }
-
-// export default ServiceCarousel;
+export default ServiceCarousel;
