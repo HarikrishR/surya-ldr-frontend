@@ -38,6 +38,7 @@ import RoadSurvey from '../mappingService/roadSurvey';
 import BuildingMarking from '../mappingService/buildingMarking';
 import DroneSurvey from '../mappingService/droneSurvey';
 import DgpsSruvey from '../mappingService/dgpsSurvey';
+import Gallery from '../gallery/gallery';
 
 class Application extends React.Component {
     constructor(){
@@ -83,6 +84,7 @@ class Application extends React.Component {
                     <Route path="/boundary-survey" element={<BoundarySurvey />} />
                     <Route path="/boundary-fixing-surveying" element={<BoundaryFixingSurvey />} />
                     <Route path="/fmb-drawing" element={<FMBDrawing />} />
+                    <Route path="/gallery" element={<Gallery />} />
                     {/* <Route path="/dashboard" element={<DashBoard />} /> */}
                     {/* <Route path="/products" element={<Products />} /> */}
                     {/* <Route path="/sign-in" element={<SignIn />} /> */}

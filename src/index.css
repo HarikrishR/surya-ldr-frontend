@@ -106,9 +106,9 @@ h2::after {
 }
 .btn {
   background: #f00100;
-  padding: 8px 20px;
+  padding: 7.5px 20px;
   color: #fff;
-  border-radius: 0px;
+  border-radius: 5px;
   border: 0px;
   font-family: 'jost-medium';
 }
@@ -136,4 +136,8 @@ h2::after {
 }
 .accordion-body {
   padding-top: 0px;
+}
+.modal,
+.modal-backdrop {
+  z-index: 2000;
 }

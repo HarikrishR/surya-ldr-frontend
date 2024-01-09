@@ -57,6 +57,7 @@ class Header extends React.Component {
                         <Link title='Home' to="/" className='nav-link'>Home</Link>
                         <Link title='About Us' to="/about-us" className='nav-link'>About Us</Link>
                         <Link title='Services' to="/services" className='nav-link'>Services</Link>
+                        <Link title='Gallery' to="/gallery" className='nav-link'>Gallery</Link>
                         <Link title='Sample Sketches' to="/sample-sketches" className='nav-link'>Sample Sketches</Link>
                         {
                         this.props.isAuthenticated && this.props.userData.role === "admin" ? 

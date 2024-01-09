@@ -7,6 +7,7 @@
     position: sticky;
     top: 0;
     z-index: 2000;
+    border-bottom: 2px solid #f2efef;
 }
 .navTop p {
     color: #5e5058;

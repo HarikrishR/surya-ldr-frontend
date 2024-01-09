@@ -144,11 +144,14 @@
 .whyChoose p{
     font-family: 'jost-regular';
 }
-.whyChoose ul {
-    list-style-type: none;
+.whyChoose .whyChooseBox {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
 }
-.whyChoose ul li{
-    font-family: 'jost-semi-bold';
+.whyChoose .whyChooseBox h4 {
+    font-family: 'dm-sans-extra-bold';
+    font-size: 18px;
 }
 .needs {
     padding: 60px 0;
@@ -266,4 +269,31 @@
 }
 .indexFaq .accordion p{
     font-family: 'jost-regular';
+}
+.indexGallery {
+    padding: 60px 0;
+}
+.indexGallery .galleryBox {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.indexGallery .galleryBox.before::before{
+    position: absolute;
+    background: #4d4b4ba1;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.indexGallery .galleryBox.before div {
+    font-family: 'dm-sans-extra-bold';
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    left: 0px;
+    top: 0;
+    bottom: 0;
 }

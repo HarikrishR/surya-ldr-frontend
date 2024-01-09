@@ -13,7 +13,13 @@ import ceo from "../../assets/images/ceo.webp";
 import chairMan from "../../assets/images/chairMan.webp";
 import ServiceCarousel from "../serviceCarousel/serviceCarousel";
 import HomeContact from "../homeContact/homeContact";
+import g1 from '../../assets/images/gallery/g1.webp';
+import g2 from '../../assets/images/gallery/g2.webp';
+import g3 from '../../assets/images/gallery/g3.webp';
+import g4 from '../../assets/images/gallery/g4.webp';
+import g5 from '../../assets/images/gallery/g5.webp';
 import './index.css'
+import { Link } from "react-router-dom";
 
 class Index extends React.Component {
     constructor(){
@@ -65,25 +71,17 @@ class Index extends React.Component {
                     <h2>Why Choose LDR ?</h2>
                     <p className="mb-4">When seeing our surveyed drawings, you will feel as if you are on the spot. We focus about the accuracy of field-collected data.</p>
                     <div className="row">
-                        <div className="offset-md-2 col-md-4">
-                            <ul className="p-0 mb-0">
-                                <li>Site Photo's</li>
-                                <li>Site Location in barcode</li>
-                                <li>Google earth top view pics</li>
-                                <li>ISO Certified company</li>
-                                <li>DGPS Coord</li>
-                                <li>File are secure up to 10 years</li>
-                            </ul>
+                        <div className="col-md-6 offset-lg-2 col-lg-4 offset-xl-3 col-xl-3">
+                            <div className="whyChooseBox shadow">
+                                <h4 className="mb-2">No.1 Land Survey Services</h4>
+                                <p className="mb-0">LDR Survey Pvt Ltd is the best land survey consultancy and training institute around south India.</p>
+                            </div>
                         </div>
-                        <div className="col-md-4">
-                            <ul className="p-0 mb-0">
-                                <li>Road measurement</li>
-                                <li>Surrounding details</li>
-                                <li>Survey Numbers</li>
-                                <li>Building projections limits</li>
-                                <li>Vacant & Developed area's percentage</li>
-                                <li>Available at 24X7</li>
-                            </ul>
+                        <div className="col-md-6 col-lg-4 col-xl-3 mt-3 mt-md-0">
+                            <div className="whyChooseBox shadow">
+                                <h4 className="mb-2">Are You Feel Like</h4>
+                                <p className="mb-0">We are not ensuing the traditional way. Our Team pursue Virtual way to achieve our clients need.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -209,6 +207,58 @@ class Index extends React.Component {
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="indexGallery">
+                <div className="container">
+                    <div className="row">
+                        <div className="offset-md-2 col-md-8">
+                            <div className="text-center">
+                                <h2>Gallery</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="offset-md-1 col-md-10">
+                            <div className="row">
+                                <div className="col-sm-6 col-md-4 mt-4 mt-md-0">
+                                    <div className="galleryBox shadow">
+                                        <img src={g1} alt="Gallery" className="img-fluid" />
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 col-md-4 mt-4 mt-md-0">
+                                    <div className="galleryBox shadow">
+                                        <img src={g2} alt="Gallery" className="img-fluid" />
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 col-md-4 mt-4 mt-md-0">
+                                    <div className="galleryBox shadow">
+                                        <img src={g3} alt="Gallery" className="img-fluid" />
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 col-md-4 mt-4">
+                                    <div className="galleryBox shadow">
+                                        <img src={g4} alt="Gallery" className="img-fluid" />
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 col-md-4 mt-4">
+                                    <div className="galleryBox shadow">
+                                        <img src={g5} alt="Gallery" className="img-fluid" />
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 col-md-4 mt-4">
+                                    <Link title='Gallery' to="/gallery">
+                                        <div className="galleryBox before shadow position-relative">
+                                            <img src={g5} alt="Gallery" className="img-fluid" />
+                                            <div className='position-absolute'>
+                                                <a>See More</a>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
